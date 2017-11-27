@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kCg-mG-Hbc">
+                                <rect key="frame" x="67" y="139" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9E3-ZK-z4D">
+                                <rect key="frame" x="148" y="375" width="79" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="FFs-Kh-NdQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="fqY-Rr-P2R"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Fly"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJe-JN-8dt">
+                                <rect key="frame" x="155" y="453" width="65" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="Fyu-XH-DN6"/>
+                                    <constraint firstAttribute="height" constant="30" id="dav-Z1-gOl"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="reStartButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ke7-4e-eZV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="kCg-mG-Hbc" secondAttribute="trailing" id="FWJ-e3-yaW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kCg-mG-Hbc" secondAttribute="bottom" constant="300" id="U3Z-Az-HGM"/>
+                            <constraint firstItem="vJe-JN-8dt" firstAttribute="top" secondItem="9E3-ZK-z4D" secondAttribute="bottom" constant="48" id="Vtf-X3-164"/>
+                            <constraint firstItem="9E3-ZK-z4D" firstAttribute="top" secondItem="kCg-mG-Hbc" secondAttribute="bottom" constant="108" id="YEz-8X-KX2"/>
+                            <constraint firstItem="vJe-JN-8dt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hhu-vc-yCk"/>
+                            <constraint firstItem="kCg-mG-Hbc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lmg-PP-mhV"/>
+                            <constraint firstItem="kCg-mG-Hbc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oKm-5D-Hrr"/>
+                            <constraint firstItem="9E3-ZK-z4D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rgx-tT-GWK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="flyButton" destination="9E3-ZK-z4D" id="477-z6-4Nj"/>
+                        <outlet property="reStart" destination="vJe-JN-8dt" id="1xx-Jw-bdP"/>
+                        <outlet property="webView" destination="kCg-mG-Hbc" id="bEv-Sf-aKW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
